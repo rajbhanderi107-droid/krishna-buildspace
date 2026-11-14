@@ -1,0 +1,406 @@
+{
+ "ongoing": {
+  "head": [
+   "Sr.No.",
+   "Project Description",
+   "State",
+   "Total contract value (in ₹ million)",
+   "Unexecuted Value (₹ in million)",
+   "Project Type - Sector",
+   "Awarding Entity"
+  ],
+  "rows": [
+   [
+    "1",
+    "Sub-contractual work for construction of civil, structural, plumbing, firefighting, electrification, ELV, HVAC & horticulture & irrigation works for proposed 150TPD powder plant building and ancillary civil works at Sanadar Dairy, Sankul Ta., Deodar District, Banaskantha, Gujarat",
+    "Gujarat",
+    "1,529.75",
+    "1,275.21",
+    "Industrial",
+    "An Indian civil construction and project contracting company serving public and private sector clients"
+   ],
+   [
+    "2",
+    "Construction and turnkey works of approx. 0.45 million sq. ft. for Highline Phase-2 by AG Group for residential use",
+    "Gujarat",
+    "1,307.45",
+    "1,109.12",
+    "Residential",
+    "Atithi Gokul Construction LLP"
+   ],
+   [
+    "3",
+    "Construction of milk powder plant, ice cream plant and bakery unit in Sitarganj, District Udham Singh Nagar, Uttarakhand",
+    "Uttarakhand",
+    "373.75",
+    "373.75",
+    "Industrial",
+    "National Projects Construction Corporation Limited"
+   ],
+   [
+    "4",
+    "Construction of ayurvedic cancer hospital, ayurvedic cancer research centre, hostel/residential building (phase-1) including all E&M services & horticulture works for integrated centre for treatment, research and education in cancer for tata memorial centre at Tambati, Khalapur, District Raigad, Maharashtra. A portion of our work for this project has been sub-contracted to our Subsdiary, Deep Electricals.",
+    "Maharashtra",
+    "271.27",
+    "271.27",
+    "Health",
+    "Private sector client engaged in the business of real estate development"
+   ],
+   [
+    "5",
+    "Construction of central covered courtyard at 39 JNV’s in Uttar Pradesh",
+    "Uttar Pradesh",
+    "294.65",
+    "268.17",
+    "Institutional",
+    "National Projects Construction Corporation Limited"
+   ],
+   [
+    "6",
+    "New construction of non-communicable disease detection centre at Sola, Ahmedabad",
+    "Gujarat",
+    "243.5",
+    "243.5",
+    "Health",
+    "A government associated project coordination and monitoring office"
+   ],
+   [
+    "7",
+    "Civil, structural, plumbing, firefighting, electrical, ELV & landscaping works for staff quarters at Agro Park, UPSIDC area, Karkhiyaon, Pindra, Varanasi",
+    "Uttar Pradesh",
+    "268.73",
+    "235.92",
+    "Residential",
+    "A district level co-operative organisation engaged in procurement, processing and marketing of milk and milk products"
+   ],
+   [
+    "8",
+    "Civil and structural work for WAMUL fermented (30 KLPD expandable upto 50 KLPD) & ice cream plant (20 KLPH expandable upto 30 KLPH) and other ancillary works i.e. water supply, sanitary, storm, water drainage, road and ETP (civil) work at Purabi Dairy Guwahati",
+    "Assam",
+    "193.21",
+    "193.21",
+    "Industrial",
+    "Engineering consultancy and project execution company"
+   ],
+   [
+    "9",
+    "Construction of CBSE regional office & COE building in sector-G, Aerocity-1, Bhopal",
+    "Madhya Pradesh",
+    "334.4",
+    "190.57",
+    "Institutional",
+    "Wapcos Limited"
+   ],
+   [
+    "10",
+    "Construction of building for women’s, men’s and international students hostels",
+    "Goa",
+    "273.83",
+    "188.3",
+    "Institutional",
+    "A public state university engaged in higher education and academic research"
+   ],
+   [
+    "11",
+    "Development of land and construction of hostels building & sports complex and other appurtenants structure under phase-III of NCR Biotech Science Cluster, Faridabad, Haryana for Translational Health Science and Technology Institute (THSTI)",
+    "Haryana",
+    "455.71",
+    "184.48",
+    "Institutional",
+    "A Government owned engineering consultancy company"
+   ],
+   [
+    "12",
+    "Construction of commercial tower S plus (3B+G+12) near IOCL petrol pump, SP Ring Road, Ognaj Circle, Ahmedabad",
+    "Gujarat",
+    "221.25",
+    "159.76",
+    "Commercial",
+    "BSP Builspace LLP"
+   ],
+   [
+    "13",
+    "Construction of CBSE regional office building at Sector-30, Rohini, Delhi",
+    "Delhi",
+    "376.98",
+    "152.09",
+    "Institutional",
+    "Wapcos Limited"
+   ],
+   [
+    "14",
+    "Construction of working women hostel at Goa Industrial Verna- 2 near Plot No- UO5-1 in Phase 4 under SASCI Scheme of Ministry of Finance, Government of India.",
+    "Goa",
+    "157.66",
+    "134.72",
+    "Residential",
+    "A State Government undertaking engaged in the development, management and promotion of industrial infrastructure and industrial estates"
+   ],
+   [
+    "15",
+    "Civil, structural, plumbing, firefighting, electrical & lifts works for ice-cream plant expansion including road work etc. at Dudhmansagar Dairy Manesar, (Haryana)",
+    "Haryana",
+    "92.37",
+    "57.52",
+    "Industrial",
+    "A district-level co-operative organisation engaged in the procurement, processing and marketing of milk and milk products"
+   ],
+   [
+    "16",
+    "Tender for appointment of contractor for implementation of Swachh Bharat Mission II (Grameen) at 27 village panchayats for FY 2023-24 in the state of Goa.",
+    "Goa",
+    "459.53",
+    "135.04",
+    "Waste Management",
+    "A Government owned engineering consultancy company"
+   ],
+   [
+    "17",
+    "Construction of Material Recovery Facility at Valpoi, Canacona, Mormugao under Solid Waste Management Component of SBM 2.0 (Second Call)",
+    "Goa",
+    "55.68",
+    "32.63",
+    "Waste Management",
+    "A state government agency involved in planning, implementation and monitoring of urban development and infrastructure projects"
+   ],
+   [
+    "18",
+    "Construction of public toilets (aspirational toilets)- 17 Nos in various ULBs under used water management- sanitation component of SBM 2.0",
+    "Goa",
+    "57.32",
+    "27.52",
+    "Waste Management",
+    "A state government agency involved in planning, implementation and monitoring of urban development and infrastructure projects"
+   ],
+   [
+    "19",
+    "Construction of Sewa Bhawan Building at Diu",
+    "Diu",
+    "235.7",
+    "8.96",
+    "Commercial",
+    "A Public Works Department responsible for execution and supervision of public works and infrastructure projects"
+   ]
+  ]
+ },
+ "completed": {
+  "head": [
+   "Sr.No.",
+   "Project Description",
+   "State",
+   "Work Completed Value (in ₹ million)",
+   "Calendar year of completion",
+   "Awarding Entity",
+   "Sector"
+  ],
+  "rows": [
+   [
+    "1",
+    "Construction of pharma G+2 R&D building with civil and MEP works at Moriya, Ahmedabad",
+    "Gujarat",
+    "18.42",
+    "2022",
+    "A healthcare diagnostics solutions company",
+    "Infrastructure"
+   ],
+   [
+    "2",
+    "Construction of Main plant building, Silo foundation, Underground RCC Sump, Condenser foundation, Toilet Block, Road works, Civil works for external drainage, Internal electrification works and Refurbishment works in Old dairy building, etc for Ferozpur Dairy",
+    "Punjab",
+    "37.52",
+    "2022",
+    "A dairy engineering and manufacturing company engaged in designing, supplying, and commissioning processing equipment",
+    "Industrial"
+   ],
+   [
+    "3",
+    "Civil & structural work for development of green belt in plot no 921-922, 922-924 & construction for development of hard park for milk tanker transit storage in plot no. 924 at Faridabad dairy plant Haryana.",
+    "Haryana",
+    "34.15",
+    "2023",
+    "A cooperative dairy organisation engaged in the procurement, processing, and marketing of milk and dairy products in the Banaskantha district",
+    "Industrial"
+   ],
+   [
+    "4",
+    "Resurfacing of Molvan Approach Road km 0/0 to 3/0 Ta. Mangrol, Dist. Surat",
+    "Gujarat",
+    "3.98",
+    "2022",
+    "State government engineering and public works department",
+    "Infrastructure"
+   ],
+   [
+    "5",
+    "Construction of Moti Ghansari - Nunarada road. (NP) Km. 0/0 to 3/88 (MMGSY 2018-19). Taluka : Keshod, District : Junagadh",
+    "Gujarat",
+    "30.73",
+    "2022",
+    "State government engineering and public works department",
+    "Infrastructure"
+   ],
+   [
+    "6",
+    "Resurfacing under MMGSY (SCSP) in Sahera and Godhra Taluka, Pkg. No. 2020-21/16.",
+    "Gujarat",
+    "30.82",
+    "2022",
+    "State government engineering and public works department",
+    "Infrastructure"
+   ],
+   [
+    "7",
+    "Executed construction of various infrastructure at GC, CRPF, Chandauli, Uttar Pradesh, including quarter guard, store block, 10 bedded hospital, men’s club, primary school, family & welfare centre, grain godown, badminton court, plumbing, internal electrical work and other site development work.",
+    "Uttar Pradesh",
+    "624.20",
+    "2023",
+    "Executive Engineer, Chandauli Project, CPWD",
+    "Infrastructure"
+   ],
+   [
+    "8",
+    "Civil, Structural & internal electrification works for Addition , Alteration and renovation of existing infrastructure requirements for proposed 2000 Metric Tonnes Per Day (MTPD) Cattle Feed Plant",
+    "Gujarat",
+    "81.64",
+    "2023",
+    "Co-operative sector dairy processing organisation",
+    "Industrial"
+   ],
+   [
+    "9",
+    "Strengthening (SR) to resurfacing of Jetpur-Bagasara road KM 19/10 to 33t40",
+    "Gujarat",
+    "31.65",
+    "2023",
+    "State government engineering and public works department",
+    "Infrastructure"
+   ],
+   [
+    "10",
+    "Resurfacing of Usker Baudhan Road. Ch.0/0 to 6/0.Ta. Mandvi, Di. Surat",
+    "Gujarat",
+    "9.31",
+    "2023",
+    "State government engineering and public works department",
+    "Infrastructure"
+   ],
+   [
+    "11",
+    "Executed the construction of an advanced integrated wellness and rehabilitation centre at Village Nawada Tigaon, Block Ballabgarh, District Faridabad",
+    "Haryana",
+    "433.56",
+    "2023",
+    "Government enterprise engaged in civil, structural, and industrial construction contracting works.",
+    "Industrial"
+   ],
+   [
+    "12",
+    "Construction of Roads Under MMGSY of Bhavnagar District Package No. MMGSY / RPC-2/BVN / N/ P 11 /17-18 / Ta. Talaja, Dist. Bhavnagar",
+    "Gujarat",
+    "31.43",
+    "2023",
+    "State government engineering and public works department",
+    "Infrastructure"
+   ],
+   [
+    "13",
+    "Implementation of Swatchh Bharat Mission II (Grameen) at 40 Panchayat in FY 2021-22 in the State of Goa",
+    "Goa",
+    "245.85",
+    "2023",
+    "An engineering and project contracting company",
+    "Waste Management"
+   ],
+   [
+    "14",
+    "Civil, structural, water supply, sanitary and other miscellaneous works including electrification for establishment of milk product plant of 2.07 LLPD milk handling capacity at Barauni Dairy, Begusarai, Bihar",
+    "Bihar",
+    "392.14",
+    "2023",
+    "Shanti Procon LLP",
+    "Industrial"
+   ],
+   [
+    "15",
+    "Construction of G+10 residential towers with 1 basement at Nikol Ahmedabad, Gujarat - Billipatra Homes",
+    "Gujarat",
+    "39.76",
+    "2024",
+    "A real estate development company",
+    "Residential"
+   ],
+   [
+    "16",
+    "Construction of proposed shed with external development and renovation of existing facilities at Jabalpur in EPC mode",
+    "Madhya Pradesh",
+    "173.55",
+    "2024",
+    "A real estate development company",
+    "Industrial"
+   ],
+   [
+    "17",
+    "Resurfacing of Khadiya - Bilkha - Manekwada Road Km 11/80 to 48/40 (Between Chainage 32/00 to 48/40)",
+    "Gujarat",
+    "86.92",
+    "2024",
+    "National Projects Construction Corporation Limited",
+    "Infrastructure"
+   ],
+   [
+    "18",
+    "Construction Work of Cement Concrete Road with Tri mix, Water Bound Macadum (WBM) with Paving Block Road, Pipe Culvert, Box Culvert, Retaining Wall, Snanagruh, Storm Water Drain, LED Street Light and Drilling of 200 mm Dia Bore & Installation of Subrmersible Pump at Keshod",
+    "Gujarat",
+    "92.16",
+    "2024",
+    "State government engineering and public works department",
+    "Infrastructure"
+   ],
+   [
+    "19",
+    "Construction of 3 No's G+14 Residential tower with 2 Basement at Gandhinagar, Gujarat, Ahmedabad",
+    "Gujarat",
+    "140.60",
+    "2024",
+    "Municipal public authority engaged in urban infrastructure works.",
+    "Residential"
+   ],
+   [
+    "20",
+    "Civil and structural works for the Powder Plant above 6 Mtr. at Varanasi dairy plant at Dugdh Utpadak Sahakari Sang Ltd, Ramnagar industrial area, Chandauli, Varanasi. 221110.",
+    "Uttar Pradesh",
+    "30.12",
+    "2024",
+    "A construction and project contracting company engaged in civil development and infrastructure works",
+    "Industrial"
+   ],
+   [
+    "21",
+    "Civil, structural, water supply, sanitary, roadwork, internal electrification, fire-fighting, lifts and other miscellaneous works for NCDFI office complex at Vaghasi, Anand, Gujarat",
+    "Gujarat",
+    "224.11",
+    "2025",
+    "A dairy engineering and manufacturing company enagged in designing, supplying, and comissioning processing equipment",
+    "Commercial"
+   ],
+   [
+    "22",
+    "Execution of Civil, Structural and Architectural Works for Plant, Non - Plant Buildings and facilities at Village Sicha & Navinal Taluka Mundra, Kutch, Gujarat",
+    "Gujarat",
+    "341.48",
+    "2025",
+    "A private sector entity engaged in mining and other related metal product activities",
+    "Industrial"
+   ],
+   [
+    "23",
+    "Construction and Development of Sanitary Landfill -II at MSW Facility at Karsara, Varanasi",
+    "Uttar Pradesh",
+    "31.01",
+    "2024",
+    "PSU engaged in power generation",
+    "Waste Management Project"
+   ]
+  ]
+ }
+}

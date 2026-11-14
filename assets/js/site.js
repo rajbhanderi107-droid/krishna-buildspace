@@ -11,10 +11,10 @@
 
   /* ---- Preloader / page enter ---- */
   function loaded() { body.classList.add("is-loaded"); }
-  if (document.readyState === "complete") setTimeout(loaded, 350);
+  if (document.readyState === "complete") setTimeout(loaded, 1000);
   else {
-    window.addEventListener("load", function () { setTimeout(loaded, 350); });
-    setTimeout(loaded, 2500); // never trap the visitor behind the loader
+    window.addEventListener("load", function () { setTimeout(loaded, 1000); });
+    setTimeout(loaded, 3500); // never trap the visitor behind the loader
   }
   window.addEventListener("pageshow", function (e) { if (e.persisted) { body.classList.remove("is-leaving"); loaded(); } });
 

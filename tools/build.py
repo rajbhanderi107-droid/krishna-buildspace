@@ -139,7 +139,8 @@ def flink(href, label):
     return f'<li><a href="{href}">{ico("chevron")}{label}</a></li>'
 
 
-FOOTER = f"""
+def footer(extra=""):
+    return f"""
 <footer class="footer">
   <div class="footer__word" aria-hidden="true"><span data-scrollx="-0.35">Krishna BuildSpace Ltd. &nbsp;·&nbsp; Building Beyond Boundaries. &nbsp;·&nbsp; Krishna BuildSpace Ltd.</span></div>
   <div class="footer__sky" aria-hidden="true"></div>
@@ -172,7 +173,7 @@ FOOTER = f"""
 </button>
 <div class="toast" role="status" aria-live="polite"></div>
 <script src="assets/js/site.js"></script>
-<script src="assets/js/motion.js"></script>
+<script src="assets/js/motion.js"></script>{extra}
 """
 
 NOSCRIPT = (
@@ -183,7 +184,7 @@ NOSCRIPT = (
 )
 
 
-def page(filename, title, body, cls=""):
+def page(filename, title, body, cls="", scripts=""):
     full = "Krishna BuildSpace Ltd." if not title else f"{title} | Krishna BuildSpace Ltd."
     doc = f"""<!doctype html>
 <html lang="en">
@@ -207,6 +208,7 @@ def page(filename, title, body, cls=""):
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="assets/css/site.css">
 <link rel="stylesheet" href="assets/css/motion.css">
+<link rel="stylesheet" href="assets/css/scene.css">
 <noscript><style>{NOSCRIPT}</style></noscript>
 </head>
 <body class="{cls}">
@@ -214,7 +216,7 @@ def page(filename, title, body, cls=""):
 <main>
 {body}
 </main>
-{FOOTER}
+{footer(scripts)}
 </body>
 </html>
 """
@@ -270,45 +272,37 @@ def home():
         for i, (name, icon) in enumerate(DISCIPLINES, 1)
     )
     track = "".join(f"<span>{m}</span>" for m in MARQUEE * 4)
-    steps = "".join(
-        f'<li class="step"><span class="step__node">{ico(icon)}</span><span class="step__n">0{i}</span><h3>{name}</h3></li>'
+    stages = "".join(
+        f'<div class="cine__stage" aria-hidden="true"><span class="cine__k">{ico(icon)}Our Services</span>'
+        f'<span class="cine__n">0{i}<small>/ 04</small></span><h2>{name}</h2>'
+        + (f'<div class="hero__cta"><a class="btn" href="ongoing-projects.html" tabindex="-1">Our Projects {ARROW}</a></div>' if i == 4 else "")
+        + "</div>"
         for i, (name, icon) in enumerate(SERVICES, 1)
     )
+    rail = "".join(
+        f'<li><button type="button" aria-label="{name}">{ico(icon)}<span>{name}</span></button></li>'
+        for name, icon in SERVICES
+    )
     return f"""
-<section class="hero" data-nav="Home">
-  <div class="hero__grid" aria-hidden="true"></div>
-  <canvas class="hero__fx" aria-hidden="true"></canvas>
-  <div class="hero__gear hero__gear--a" aria-hidden="true">{ico("gear")}</div>
-  <div class="hero__gear hero__gear--b" aria-hidden="true">{ico("gear")}</div>
-  <div class="wrap hero__in" data-herofade>
-    <div>
-      <div class="hero__tag" data-reveal="up"><span>{ico("city")}</span>Engineering &amp; Construction Management Company</div>
-      <h1 data-split>Building Beyond <span class="accent">Boundaries.<svg class="scribble" viewBox="0 0 300 14" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M2 9 C 60 2, 120 13, 180 6 S 270 4, 298 8"/></svg></span></h1>
-      <p class="hero__text" data-reveal="up" style="--d:5">Krishna BuildSpace Ltd. offers a wide range of services, such as design &amp; architectural, pre-construction planning, project management &amp; execution.</p>
-      <div class="hero__cta" data-reveal="up" style="--d:7">
-        <a class="btn" href="ongoing-projects.html">Our Projects {ARROW}</a>
-        <a class="btn btn--ghost" href="about-us.html">About Us</a>
+<section class="hero cine" data-nav="Home">
+  <div class="cine__pin">
+    <svg class="cine__svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice"></svg>
+    <div class="cine__scrim" aria-hidden="true"></div>
+    <div class="wrap cine__in">
+      <div class="cine__stage is-on">
+        <div class="hero__tag"><span>{ico("city")}</span>Engineering &amp; Construction Management Company</div>
+        <h1 data-split>Building Beyond <span class="accent">Boundaries.<svg class="scribble" viewBox="0 0 300 14" preserveAspectRatio="none" aria-hidden="true"><path d="M2 9 C 60 2, 120 13, 180 6 S 270 4, 298 8"/></svg></span></h1>
+        <p class="hero__text">Krishna BuildSpace Ltd. offers a wide range of services, such as design &amp; architectural, pre-construction planning, project management &amp; execution.</p>
+        <div class="hero__cta">
+          <a class="btn" href="ongoing-projects.html">Our Projects {ARROW}</a>
+          <a class="btn btn--ghost" href="about-us.html">About Us</a>
+        </div>
       </div>
+      {stages}
     </div>
-    <div class="hero__art" data-reveal="zoom" style="--d:3">
-      <div class="hero__disc" data-depth="-14" aria-hidden="true"></div>
-      <div class="hero__ring" aria-hidden="true"></div>
-      <i class="cloud cloud--a" aria-hidden="true"></i><i class="cloud cloud--b" aria-hidden="true"></i><i class="cloud cloud--c" aria-hidden="true"></i>
-      <svg class="hero__dim" viewBox="0 0 400 400" preserveAspectRatio="none" aria-hidden="true">
-        <path pathLength="1" d="M14 60V340M6 60h16M6 340h16"/><path pathLength="1" d="M70 388H360M70 380v16M360 380v16"/>
-      </svg>
-      <span class="hero__dimlbl hero__dimlbl--v" aria-hidden="true">Since 1995</span>
-      <span class="hero__dimlbl hero__dimlbl--h" aria-hidden="true">Building Beyond Boundaries</span>
-      <div class="hero__img" data-depth="18">
-        <img src="assets/images/img-slider.png" alt="Illustration of tower cranes constructing a building" width="2000" height="2000">
-        <i class="beacon" aria-hidden="true"></i>
-      </div>
-      <div class="chip chip--a" data-depth="34">{ico("calendar")}<b>1995</b><small>Founded<br>in</small></div>
-      <div class="chip chip--b" data-depth="-26">{ico("pin")}<b>Pan-India</b><small>Presence</small></div>
-    </div>
+    <ol class="cine__rail" aria-label="Our services"><li class="cine__railline" aria-hidden="true"><i></i></li>{rail}</ol>
+    <div class="cine__hint" aria-hidden="true"><span class="scroll-cue"></span>Scroll</div>
   </div>
-  <div class="hero__sky" aria-hidden="true"></div>
-  <span class="scroll-cue" aria-hidden="true"></span>
 </section>
 
 <div class="marquee" aria-hidden="true"><div class="marquee__track">{track}</div></div>
@@ -336,13 +330,6 @@ def home():
       </div>
     </div>
     {stats()}
-  </div>
-</section>
-
-<section class="sec sec--navy services" data-nav="Services">
-  <div class="wrap">
-    {head("What We Offer", "Our Services", "Krishna BuildSpace Ltd. offers a wide range of services, such as design &amp; architectural, pre-construction planning, project management &amp; execution.", centered=True)}
-    <ol class="steps"><li class="steps__line" aria-hidden="true"><i></i></li>{steps}</ol>
   </div>
 </section>
 
@@ -711,7 +698,7 @@ def contact():
 
 
 if __name__ == "__main__":
-    page("index.html", "", home(), "is-home")
+    page("index.html", "", home(), "is-home", '\n<script src="assets/js/scene.js"></script>')
     page("about-us.html", "About Us", about())
     page("our-team.html", "Our Team", team())
     page("ongoing-projects.html", "Ongoing Projects", projects("ongoing", "Ongoing Projects", "progress", [NOTE_HASH]))

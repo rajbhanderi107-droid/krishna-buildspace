@@ -84,22 +84,17 @@
     t.setAttribute("aria-label", t.textContent);
   });
 
-  /* ---- Scroll engine: header hide (M10), hero fade (M45), scroll-x text (M54),
-          rotation (M46), timeline (M50), marquee velocity (M44) ---- */
-  var header = $(".header"), heroFade = $("[data-herofade]");
+  /* ---- Scroll engine: header hide (M10), scroll-x text (M54), rotation (M46),
+          marquee velocity (M44) ---- */
+  var header = $(".header");
   var scrollX = $$("[data-scrollx]"), rotates = $$("[data-rotate]");
-  var steps = $(".steps"), stepEls = $$(".step"), stepLine = $(".steps__line i");
   var marquee = $(".marquee__track"), mAnim = null, lastY = window.scrollY, vel = 0, dir = 1, raf = false;
   function frame() {
     raf = false;
     var y = window.scrollY, dy = y - lastY, vh = window.innerHeight;
     lastY = y;
-    if (header) header.classList.toggle("is-hidden", dy > 0 && y > 420);
+    if (header) header.classList.toggle("is-hidden", dy > 0 && y > 160);
     if (reduce) return;
-    if (heroFade && y < vh * 1.2) {
-      heroFade.style.opacity = Math.max(0, 1 - y / (vh * 0.75)).toFixed(3);
-      heroFade.style.transform = "translate3d(0," + (y * 0.18).toFixed(1) + "px,0)";
-    }
     scrollX.forEach(function (el) {
       var r = el.parentNode.getBoundingClientRect();
       if (r.bottom < -50 || r.top > vh + 50) return;
@@ -107,12 +102,6 @@
       el.style.transform = "translate3d(" + (parseFloat(el.dataset.scrollx) * prog * el.offsetWidth * 0.5).toFixed(1) + "px,0,0)";
     });
     rotates.forEach(function (el) { el.style.rotate = (y * parseFloat(el.dataset.rotate)).toFixed(1) + "deg"; });
-    if (steps) {
-      var sr = steps.getBoundingClientRect();
-      var sp = Math.max(0, Math.min(1, (vh * 0.8 - sr.top) / (vh * 0.5)));
-      stepLine.style.setProperty("--p", sp.toFixed(3));
-      stepEls.forEach(function (s, i) { s.classList.toggle("is-on", sp >= i / (stepEls.length - 1) - 0.02); });
-    }
     if (dy) dir = dy > 0 ? 1 : -1;
     vel = Math.min(6, Math.abs(dy) / 8);
   }
@@ -187,38 +176,6 @@
       b.style.overflow = "hidden"; b.appendChild(s);
       setTimeout(function () { s.remove(); }, 750);
     });
-  }
-
-  /* ---- M30 hero particle network ---- */
-  var cv = $(".hero__fx");
-  if (cv && !reduce && cv.getContext) {
-    var ctx = cv.getContext("2d"), hero = cv.parentNode, W = 0, H = 0, pts = [], mx = -999, my = -999, live = true, dpr = Math.min(2, window.devicePixelRatio || 1);
-    var size = function () {
-      W = hero.clientWidth; H = hero.clientHeight; cv.width = W * dpr; cv.height = H * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-      var n = Math.round(Math.min(60, W / 26)); pts = [];
-      for (var i = 0; i < n; i++) pts.push({ x: Math.random() * W, y: Math.random() * H, vx: (Math.random() - 0.5) * 0.35, vy: (Math.random() - 0.5) * 0.35 });
-    };
-    size(); window.addEventListener("resize", size);
-    hero.addEventListener("pointermove", function (e) { var r = hero.getBoundingClientRect(); mx = e.clientX - r.left; my = e.clientY - r.top; });
-    hero.addEventListener("pointerleave", function () { mx = my = -999; });
-    if ("IntersectionObserver" in window) new IntersectionObserver(function (es) { live = es[0].isIntersecting; }).observe(hero);
-    (function draw() {
-      if (live) {
-        ctx.clearRect(0, 0, W, H);
-        for (var i = 0; i < pts.length; i++) {
-          var p = pts[i]; p.x += p.vx; p.y += p.vy;
-          if (p.x < 0 || p.x > W) p.vx *= -1; if (p.y < 0 || p.y > H) p.vy *= -1;
-          ctx.fillStyle = "rgba(23,27,42,.28)"; ctx.fillRect(p.x - 1.5, p.y - 1.5, 3, 3);
-          for (var j = i + 1; j < pts.length; j++) {
-            var q = pts[j], d = Math.hypot(p.x - q.x, p.y - q.y);
-            if (d < 130) { ctx.strokeStyle = "rgba(23,27,42," + (0.12 * (1 - d / 130)).toFixed(3) + ")"; ctx.lineWidth = 1; ctx.beginPath(); ctx.moveTo(p.x, p.y); ctx.lineTo(q.x, q.y); ctx.stroke(); }
-          }
-          var dm = Math.hypot(p.x - mx, p.y - my);
-          if (dm < 190) { ctx.strokeStyle = "rgba(235,32,39," + (0.5 * (1 - dm / 190)).toFixed(3) + ")"; ctx.lineWidth = 1; ctx.beginPath(); ctx.moveTo(p.x, p.y); ctx.lineTo(mx, my); ctx.stroke(); }
-        }
-      }
-      requestAnimationFrame(draw);
-    })();
   }
 
   /* ---- M76 "Why choose us" tabs advance on their own until touched ---- */

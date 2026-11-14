@@ -1,6 +1,6 @@
 # Motion design — 100 points
 
-Every point below is implemented in `assets/css/site.css`, `assets/css/motion.css`, `assets/js/site.js` and `assets/js/motion.js`. Code comments marked `M01`…`M100` refer to these numbers. All motion is switched off for visitors who set "reduce motion" on their device, and pointer-only effects (cursor ring, tilt, magnetic buttons) are skipped on touch screens.
+Every point below is implemented in `assets/css/` (`site.css`, `motion.css`, `scene.css`) and `assets/js/` (`site.js`, `motion.js`, `scene.js`). Code comments marked `M01`…`M100` refer to these numbers. All motion is switched off for visitors who set "reduce motion" on their device, and pointer-only effects (cursor ring, tilt, magnetic buttons) are skipped on touch screens.
 
 ## Loading and page transitions
 1. Preloader logo fades up.
@@ -36,36 +36,36 @@ Every point below is implemented in `assets/css/site.css`, `assets/css/motion.cs
 27. Business-discipline cards tilt in 3D toward the pointer.
 28. A red spotlight follows the pointer inside those cards.
 
-## Home hero
-29. Blueprint grid drifts diagonally behind the hero.
-30. Particle network: drifting nodes connect with lines and link to the cursor in red.
+## Home hero — a scene you play by scrolling
+29. The hero pins to the screen and scrolling scrubs a full-screen scene forwards and backwards.
+30. Scrubbing is eased, so the scene glides to the scroll position instead of jumping.
 31. Headline rises word by word.
 32. A hand-drawn underline wipes in under "Boundaries."
 33. The tag pill's icon has a pulsing ring.
-34. Intro text and buttons reveal in sequence.
-35. Crane illustration zooms in.
-36. Illustration, disc and chips move at different depths with the mouse.
-37. Dashed orbit ring rotates with a red dot riding on it.
-38. "1995" and "Pan-India" chips bob gently.
-39. Three clouds drift across the illustration.
-40. A red beacon blinks on the tip of the crane.
-41. Blueprint dimension lines draw around the illustration and the label fades in.
-42. Two outlined gears turn in opposite directions.
-43. City skyline pans endlessly along the bottom.
+34. Tag, intro text and buttons enter in sequence while the scene settles from a slight zoom.
+35. The lit towers dissolve into a blueprint wireframe (01 Design & Architectural).
+36. The sky cross-fades dusk → blueprint → daylight → dusk as the story moves on.
+37. The blueprint grid drifts, and red dimension lines and drafting labels draw around the towers.
+38. The elevation tilts away into a top-down floor plan (02 Pre-Construction Planning).
+39. The plan draws line by line: walls, core, door swings, grid bubbles, north arrow; red columns pop in.
+40. Floors rise one by one, each dropping into place (03 Project Management).
+41. A tower crane works the site: trolley travels, hook lowers to the growing top floor, beacon blinks.
+42. The glass façade wraps the structure floor by floor (04 Execution).
+43. The sun sets, stars twinkle and windows light up at random, near and across the far skyline.
 44. Services marquee scrolls continuously, pauses on hover, and speeds up or reverses with scroll direction.
-45. Hero content drifts and fades as you scroll away.
+45. Captions change with each stage: outlined number, service name and red rule slide in as the last one leaves.
 
 ## Scroll-driven sections
 46. The dashed ring in the About panel rotates with scroll position.
 47. A crane outline draws itself inside the About panel.
 48. The red corner bracket grows from the panel's corner.
-49. Services timeline: each step lights up in order.
-50. The timeline line fills with scroll progress, led by a glowing dot.
-51. Step circles scale and tilt on hover; labels rise as they activate.
+49. A four-step rail beside the scene lights up one service icon at a time; clicking a step scrolls to it.
+50. The rail's line fills with scroll progress.
+51. Clouds drift across the day sky, and the far skyline, clouds and stars shift with the mouse for depth.
 52. Section titles reveal letter by letter.
 53. Section labels track in from wide spacing while their red line grows.
 54. Giant outlined "Building Beyond Boundaries." text slides sideways with scroll (home band and footer).
-55. Section dots on the home page show where you are and jump to a section, with slide-out labels.
+55. The rail's step labels slide out on hover, and a scroll hint with a moving wheel fades away as you start scrolling.
 56. Blocks reveal from below, left, right or by zoom, staggered within groups.
 57. A red ring draws around each stat icon and spins on hover.
 58. "150+" and "30+" count up from zero.
@@ -75,7 +75,7 @@ Every point below is implemented in `assets/css/site.css`, `assets/css/motion.cs
 ## Icons
 61. Every line icon draws its own outline as it scrolls into view.
 62. Icons nudge when their link or button is hovered.
-63. Scroll cue: a dot drops through a mouse outline.
+63. Scroll cue: a dot drops through a mouse outline under the word "Scroll".
 64. Discipline icons wiggle and turn white on hover.
 
 ## Cards, panels and buttons

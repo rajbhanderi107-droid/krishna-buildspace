@@ -24,6 +24,7 @@ python3 tools/build.py
 - `assets/css/site.css` — design and animations (respects `prefers-reduced-motion`)
 - `assets/js/site.js` — scroll reveals, counters, tilt cards, accordion, DRHP confirmation modal, project search/filter, contact form
 - `assets/css/motion.css`, `assets/js/motion.js` — the motion design layer; the full list of 100 effects is in `MOTION.md`
+- `assets/css/scene.css`, `assets/js/scene.js` — the pinned, scroll-scrubbed home hero (towers → blueprint → floor plan → construction → finished), drawn entirely in SVG by code
 - Line icons come from one SVG sprite defined in `tools/build.py` (`ICONS`); use `ico("name")` in a page
 
 ## Notes
